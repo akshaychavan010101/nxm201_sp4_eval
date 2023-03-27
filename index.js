@@ -1,11 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const redis = require("redis");
-const client = redis.createClient();
-client.on("error", (err) => console.log(err.message));
-(async () => await client.connect())();
-client.on("redy", () => console.log("Redis connected"));
+// const redis = require("redis");
+// const client = redis.createClient();
+// client.on("error", (err) => console.log(err.message));
+// (async () => await client.connect())();
+// client.on("redy", () => console.log("Redis connected"));
 
 const { connection } = require("./config/db");
 const { UserRouter } = require("./routes/users.routes");
